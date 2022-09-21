@@ -8,6 +8,10 @@
 </head>
 <body>
     <h1>Comics</h1>
-    <a href="{{route('comics.show', ['id' => '1'])}}">Comic</a>
+    <ul>
+        @foreach($comics as $comic)
+            <li><a href="{{route('comics.show', $comic->id)}}">{{$comic->title}}</a></li>
+        @endforeach
+    </ul>
 </body>
 </html>

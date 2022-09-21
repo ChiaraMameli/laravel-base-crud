@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Comic</h1>
+    <h3>{{$comic->title}}</h3>
 </body>
 </html>
