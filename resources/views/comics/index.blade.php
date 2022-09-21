@@ -1,22 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@extends('layouts.main')
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{asset('css/app.css')}}" />
-    
-    <title>Comics</title>
-</head>
-<body>
-        <h1>Comics</h1>
-        <a href="{{route('comics.create')}}">Crea</a>
-        <ul>
-            @foreach($comics as $comic)
-                <li><a href="{{route('comics.show', $comic->id)}}">{{$comic->title}}</a></li>
-            @endforeach
-        </ul>
-</body>
-</html>
+@section('title', 'comics')
+
+@section('main-content')
+
+        <div class="container">
+            <div class="row">
+                @foreach($comics as $comic)
+                <div id="card-container" class="col-3 gy-3">
+                    <div class="card h-100" style="width: 18rem;">
+                        <img src="{{$comic->thumb}}" class="card-img-top" alt="{{$comic->title}}">
+                        <div class="card-body p-2">
+                            <h5 class="card-title">{{$comic->setTitleExtract($comic)}}</h5>
+                            <p class="card-text">{{$comic->setDescriptionExtract($comic)}}</p>
+                            <a href="{{route('comics.show', $comic->id)}}" class="btn btn-primary">See details</a>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+
+@endsection
