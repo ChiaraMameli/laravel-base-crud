@@ -10855,3 +10855,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  font-family: sans-serif;
+}
+
+main {
+  background-color: #666;
+  padding: 5rem;
+}
