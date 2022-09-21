@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}" />
+@extends('layouts.main')
 
-    <title>Create</title>
-</head>
-<body>
-    <div class="container">
-        <form action="{{route('comics.store')}}" method="POST">
+@section('title', 'Insert new comic')
+
+@section('main-content')
+
+<form action="{{route('comics.store')}}" method="POST">
             @csrf
             <div class="row g-3">
                 <div class="col-4">
@@ -41,6 +35,5 @@
 
             </div>
         </form>
-    </div>
-</body>
-</html>
+
+@endsection
