@@ -17,6 +17,8 @@
                         <div class="col-4">${{$comic->price}}</div>
                         <div class="col-4">Serie: {{$comic->series}}</div>
                         <div class="col-4">Out: {{$comic->sale_date}}</div>
+                        <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-warning">Edit</a>
+                        <a href="{{route('comics.index')}}" class="btn btn-primary">See all</a>
                     </div>
                 </div>
             </div>

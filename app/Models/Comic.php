@@ -16,5 +16,14 @@ class Comic extends Model
         return $extract . '...';
     }
 
+    protected $fillable = [
+        'title',
+        'type',
+        'thumb',
+        'price',
+        'series',
+        'sale_date',
+        'description'
+    ];
 
 }
