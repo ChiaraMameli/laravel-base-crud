@@ -10860,11 +10860,22 @@ body {
 }
 
 main {
-  min-height: 95vh;
+  min-height: calc(100vh - 56px);
   background-color: #666;
   padding: 5rem;
+  position: relative;
 }
 
 #card-container {
   height: 600px;
+}
+
+.form-container {
+  padding: 1rem;
+  background-color: #212529;
+  border-radius: 10px;
+}
+
+._width {
+  min-width: 80%;
 }

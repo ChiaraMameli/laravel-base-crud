@@ -3,6 +3,7 @@
 @section('title', 'Insert new comic')
 
 @section('main-content')
+<div class="form-container position-absolute top-50 start-50 translate-middle _width">
 
 <form action="{{route('comics.store')}}" method="POST">
             @csrf
@@ -30,10 +31,10 @@
                 </div>
                 
                 <div class="col-auto">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-success">Submit</button>
                 </div>
 
             </div>
         </form>
-
+</div>
 @endsection

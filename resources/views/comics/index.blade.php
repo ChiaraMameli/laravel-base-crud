@@ -12,6 +12,7 @@
                 <div class="card-body p-2">
                     <h5 class="card-title">{{$comic->setTitleExtract($comic)}}</h5>
                     <p class="card-text">{{$comic->setDescriptionExtract($comic)}}</p>
+
                     <div class="d-flex justify-content-between">
                         <a href="{{route('comics.show', $comic->id)}}" class="btn btn-primary">See details</a>
                         <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-warning">Edit</a>
@@ -21,6 +22,7 @@
                             <button type="submit" class="btn btn-danger">Delete</button>
                         </form>
                     </div>
+                    
                 </div>
             </div>
         </div>

@@ -3,7 +3,6 @@
 @section('title', 'Edit a comic')
 
 @section('main-content')
-
         <form action="{{route('comics.update', $comic->id)}}" method="POST">
             @csrf
             @method('PUT')
@@ -36,6 +35,5 @@
 
             </div>
         </form>
-
 
 @endsection

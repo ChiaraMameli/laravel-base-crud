@@ -22,13 +22,13 @@
                     <ul class="navbar-nav">
                         
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+                            <a class="nav-link {{Route::is('home') ? 'active' : ''}}" aria-current="page" href="{{route('home')}}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{route('comics.index')}}">Comics</a>
+                            <a class="nav-link {{Route::is('comics.index') ? 'active' : ''}}" aria-current="page" href="{{route('comics.index')}}">Comics</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{route('comics.create')}}">Insert new comic</a>
+                            <a class="nav-link {{Route::is('comics.create') ? 'active' : ''}}" aria-current="page" href="{{route('comics.create')}}">Insert new comic</a>
                         </li>
 
                     </ul>
