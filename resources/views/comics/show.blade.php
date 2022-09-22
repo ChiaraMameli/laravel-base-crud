@@ -4,6 +4,12 @@
 
 @section('main-content')
 
+@if(session('add'))
+    <div class="alert alert-success">
+        {{session('add')}}
+    </div>
+@endif
+
     <div class="card position-absolute top-50 start-50 translate-middle mb-3 _width">
         <div class="row g-0">
             <div class="col-2">

@@ -4,6 +4,12 @@
 
 @section('main-content')
 
+@if(session('delete'))
+    <div class="alert alert-success">
+        {{session('delete')}}
+    </div>
+@endif
+
     <div class="row">
         @foreach($comics as $comic)
         <div id="card-container" class="col-3 gy-3">
